@@ -29,25 +29,21 @@ AI에게 전달되는 정보 자체를 페르소나 기준으로 필터링하여
 
 <table>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/login.png" width="400"/></td>
-    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/signup.png" width="400"/></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/login.png" width="100%"/></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/signup.png" width="100%"/></td>
   </tr>
 </table>
 
 시뮬레이션 생성
 
-<table>
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/create.png" width="400"/></td>
-    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/create_option.png" width="400"/></td>
-  </tr>
-</table>
+<img src="https://raw.githubusercontent.com/S-warm/.github/main/images/create.png" width="700"/>
+<img src="https://raw.githubusercontent.com/S-warm/.github/main/images/create_option.png" width="700"/>
 
 시뮬레이션 진행
 
-<div align="center">
+
   <img src="https://raw.githubusercontent.com/S-warm/.github/main/images/polling.png" width="700"/>
-</div>
+
 
 결과 대시보드 (5개 탭)
 
@@ -55,8 +51,8 @@ AI에게 전달되는 정보 자체를 페르소나 기준으로 필터링하여
 
 <table>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/overview1.png" width="400"/></td>
-    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/overview2.png" width="400"/></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/overview1.png" width="100%"/></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/overview2.png" width="100%"/></td>
   </tr>
 </table>
 
@@ -64,28 +60,28 @@ AI에게 전달되는 정보 자체를 페르소나 기준으로 필터링하여
 
 <table>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/issues1.png" width="400"/></td>
-    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/issues2.png" width="400"/></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/issues1.png" width="100%"/></td>
+    <td width="50%"><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/issues2.png" width="100%"/></td>
   </tr>
 </table>
 
 히트맵 - 실제 사이트 스크린샷 위에 연령대별 실패 지점 오버레이
 
-<div align="center">
+
   <img src="https://raw.githubusercontent.com/S-warm/.github/main/images/heatmap.png" width="700"/>
-</div>
+
 
 WCAG - axe-core 기반 접근성 자동 검사 결과
 
-<div align="center">
+
   <img src="https://raw.githubusercontent.com/S-warm/.github/main/images/wcag.png" width="700"/>
-</div>
+
 
 AI 수정 - Code Fixer AI가 생성한 실제 적용 가능한 코드 수정안
 
-<div align="center">
+
   <img src="https://raw.githubusercontent.com/S-warm/.github/main/images/ai_fix.png" width="700"/>
-</div>
+
 
 ---
 
@@ -97,9 +93,9 @@ AI 수정 - Code Fixer AI가 생성한 실제 적용 가능한 코드 수정안
 
 ## 시스템 구조
 
-<div align="center">
+
   <img src="https://raw.githubusercontent.com/S-warm/.github/main/images/system_architecture.png" width="700"/>
-</div>
+
 
 사용자가 React 대시보드에서 시뮬레이션을 설정하면 Spring Boot가 요청을 받아 Redis + Celery 큐에 작업을 분배한다. FastAPI 시뮬레이션 엔진의 다수 워커가 페르소나 단위로 병렬 실행되며, 로그와 스크린샷은 S3에, 메타데이터와 결과 요약은 PostgreSQL(RDS)에 저장된다. Auditor AI(GPT-4o)는 S3의 로그 데이터에 RAG 기반으로 접근하여 패턴 분석을 수행한다.
 
@@ -107,9 +103,9 @@ AI 수정 - Code Fixer AI가 생성한 실제 적용 가능한 코드 수정안
 
 ## AI Framework 구조
 
-<div align="center">
+
   <img src="https://raw.githubusercontent.com/S-warm/.github/main/images/ai_architecture.png" width="700"/>
-</div>
+
 
 ---
 
