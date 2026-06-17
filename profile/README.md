@@ -27,41 +27,41 @@ AI에게 전달되는 정보 자체를 페르소나 기준으로 필터링하여
 
 로그인 / 회원가입
 
-![로그인](images/로그인.png)
-![회원가입](images/회원가입.png)
+![로그인](../images/로그인.png)
+![회원가입](../images/회원가입.png)
 
 시뮬레이션 생성
 
-![시뮬레이션 생성](images/시뮬레이션_생성.png)
-![시뮬레이션 생성 옵션](images/시뮬레이션_생성_옵션.png)
+![시뮬레이션 생성](../images/시뮬레이션 생성.png)
+![시뮬레이션 생성 옵션](../images/시뮬레이션 생성 옵션.png)
 
 시뮬레이션 진행
 
-![폴링](images/폴링.png)
+![폴링](../images/폴링.png)
 
 결과 대시보드 (5개 탭)
 
 개요 - 전체 성공률, 연령대별 성공/실패율, 평균 완료 시간 비교
 
-![개요](images/개요.png)
-![개요2](images/개요2.png)
+![개요](../images/개요.png)
+![개요2](../images/개요2.png)
 
 주요이슈 - Auditor AI가 도출한 UI/UX 문제 목록 및 우선순위
 
-![주요이슈](images/주요이슈.png)
-![주요이슈2](images/주요이슈2.png)
+![주요이슈](../images/주요이슈.png)
+![주요이슈2](../images/주요이슈2.png)
 
 히트맵 - 실제 사이트 스크린샷 위에 연령대별 실패 지점 오버레이
 
-![히트맵](images/히트맵.png)
+![히트맵](../images/히트맵.png)
 
 WCAG - axe-core 기반 접근성 자동 검사 결과
 
-![WCAG](images/wcag.png)
+![WCAG](../images/wcag.png)
 
 AI 수정 - Code Fixer AI가 생성한 실제 적용 가능한 코드 수정안
 
-![AI 수정](images/ai수정.png)
+![AI 수정](../images/ai수정.png)
 
 ---
 
@@ -73,7 +73,7 @@ AI 수정 - Code Fixer AI가 생성한 실제 적용 가능한 코드 수정안
 
 ## 시스템 구조
 
-![시스템 구조도](images/시스템_구조도.png)
+![시스템 구조도](../images/시스템 구조도.png)
 
 사용자가 React 대시보드에서 시뮬레이션을 설정하면 Spring Boot가 요청을 받아 Redis + Celery 큐에 작업을 분배한다. FastAPI 시뮬레이션 엔진의 다수 워커가 페르소나 단위로 병렬 실행되며, 로그와 스크린샷은 S3에, 메타데이터와 결과 요약은 PostgreSQL(RDS)에 저장된다. Auditor AI(GPT-4o)는 S3의 로그 데이터에 RAG 기반으로 접근하여 패턴 분석을 수행한다.
 
@@ -81,7 +81,7 @@ AI 수정 - Code Fixer AI가 생성한 실제 적용 가능한 코드 수정안
 
 ## AI Framework 구조
 
-![AI Framework](images/ai_구조도.png)
+![AI Framework](../images/ai 구조도.png)
 
 ---
 
