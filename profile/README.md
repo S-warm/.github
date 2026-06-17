@@ -1,4 +1,4 @@
-# Swarm
+# <img src="https://raw.githubusercontent.com/S-warm/.github/main/images/swarm_icon.png" width="40"/> Swarm
 
 **연령별 인지제약 기반 AI 사용자 시뮬레이션 엔진**
 
@@ -27,41 +27,65 @@ AI에게 전달되는 정보 자체를 페르소나 기준으로 필터링하여
 
 로그인 / 회원가입
 
-![로그인](../images/로그인.png)
-![회원가입](../images/회원가입.png)
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/login.png" width="400"/></td>
+    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/signup.png" width="400"/></td>
+  </tr>
+</table>
 
 시뮬레이션 생성
 
-![시뮬레이션 생성](../images/시뮬레이션_생성.png)
-![시뮬레이션 생성 옵션](../images/시뮬레이션_생성_옵션.png)
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/create.png" width="400"/></td>
+    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/create_option.png" width="400"/></td>
+  </tr>
+</table>
 
 시뮬레이션 진행
 
-![폴링](../images/폴링.png)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/S-warm/.github/main/images/polling.png" width="700"/>
+</div>
 
 결과 대시보드 (5개 탭)
 
 개요 - 전체 성공률, 연령대별 성공/실패율, 평균 완료 시간 비교
 
-![개요](../images/개요.png)
-![개요2](../images/개요2.png)
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/overview1.png" width="400"/></td>
+    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/overview2.png" width="400"/></td>
+  </tr>
+</table>
 
 주요이슈 - Auditor AI가 도출한 UI/UX 문제 목록 및 우선순위
 
-![주요이슈](../images/주요이슈.png)
-![주요이슈2](../images/주요이슈2.png)
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/issues1.png" width="400"/></td>
+    <td><img src="https://raw.githubusercontent.com/S-warm/.github/main/images/issues2.png" width="400"/></td>
+  </tr>
+</table>
 
 히트맵 - 실제 사이트 스크린샷 위에 연령대별 실패 지점 오버레이
 
-![히트맵](../images/히트맵.png)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/S-warm/.github/main/images/heatmap.png" width="700"/>
+</div>
 
 WCAG - axe-core 기반 접근성 자동 검사 결과
 
-![WCAG](../images/wcag.png)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/S-warm/.github/main/images/wcag.png" width="700"/>
+</div>
 
 AI 수정 - Code Fixer AI가 생성한 실제 적용 가능한 코드 수정안
 
-![AI 수정](../images/ai수정.png)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/S-warm/.github/main/images/ai_fix.png" width="700"/>
+</div>
 
 ---
 
@@ -73,7 +97,9 @@ AI 수정 - Code Fixer AI가 생성한 실제 적용 가능한 코드 수정안
 
 ## 시스템 구조
 
-![시스템 구조도](../images/시스템_구조도.png)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/S-warm/.github/main/images/system_architecture.png" width="700"/>
+</div>
 
 사용자가 React 대시보드에서 시뮬레이션을 설정하면 Spring Boot가 요청을 받아 Redis + Celery 큐에 작업을 분배한다. FastAPI 시뮬레이션 엔진의 다수 워커가 페르소나 단위로 병렬 실행되며, 로그와 스크린샷은 S3에, 메타데이터와 결과 요약은 PostgreSQL(RDS)에 저장된다. Auditor AI(GPT-4o)는 S3의 로그 데이터에 RAG 기반으로 접근하여 패턴 분석을 수행한다.
 
@@ -81,7 +107,9 @@ AI 수정 - Code Fixer AI가 생성한 실제 적용 가능한 코드 수정안
 
 ## AI Framework 구조
 
-![AI Framework](../images/ai_구조도.png)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/S-warm/.github/main/images/ai_architecture.png" width="700"/>
+</div>
 
 ---
 
